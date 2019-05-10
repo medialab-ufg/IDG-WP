@@ -183,6 +183,19 @@ class IDGWP_Customize
 		$wp_customize->selective_refresh->add_partial($this->option_key . '_main_carousel_slides', array(
 			'selector' => '#jumbotron-carousel',
 		));
+		
+		$wp_customize->add_setting($this->option_key . 'home_show_agenda', array(
+			'default' => false,
+			'type' => 'option',
+			'capability' => 'edit_theme_options',
+		));
+
+		$wp_customize->add_control($this->option_key . 'home_show_agenda', array(
+			'label' => 'Mostrar Agenda',
+			'section' => 'static_front_page',
+			'settings' => $this->option_key . 'home_show_agenda',
+			'type' => 'checkbox'
+		));
 
 		// TODO
 		$wp_customize->add_setting($this->option_key . '_news_sections', array(
