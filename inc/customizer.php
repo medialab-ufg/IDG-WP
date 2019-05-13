@@ -183,6 +183,19 @@ class IDGWP_Customize
 		$wp_customize->selective_refresh->add_partial($this->option_key . '_main_carousel_slides', array(
 			'selector' => '#jumbotron-carousel',
 		));
+		
+		$wp_customize->add_setting($this->option_key . 'home_show_agenda', array(
+			'default' => false,
+			'type' => 'option',
+			'capability' => 'edit_theme_options',
+		));
+
+		$wp_customize->add_control($this->option_key . 'home_show_agenda', array(
+			'label' => 'Mostrar Agenda',
+			'section' => 'static_front_page',
+			'settings' => $this->option_key . 'home_show_agenda',
+			'type' => 'checkbox'
+		));
 
 		// TODO
 		$wp_customize->add_setting($this->option_key . '_news_sections', array(
@@ -255,6 +268,34 @@ class IDGWP_Customize
 			'settings' => $this->option_key . '_home_widgets_sections_disable',
 			'type' => 'checkbox'
 		));
+		
+		
+		$wp_customize->add_section('footer_info', array(
+			'title'  	 => 'Perfis em Redes Sociais',
+			'priority'   => 200,
+		));
+		
+		$available_social_networks = idg_wp_get_available_social_networks();
+		
+		foreach ($available_social_networks as $social_slug => $social) {
+			
+			$wp_customize->add_setting($this->option_key . 'social_'. $social_slug . '_profile', array(
+				'default' => false,
+				'type' => 'option',
+				'capability' => 'edit_theme_options',
+			));
+
+			$wp_customize->add_control($this->option_key . 'social_'. $social_slug . '_profile', array(
+				'label' => 'URL do perfil do ' . $social['name'],
+				'section' => 'footer_info',
+			));
+			
+		}
+		
+		
+		
+		
+		
 	}
 
 	/**
