@@ -190,6 +190,7 @@ function idg_wp_update_custom_data_in_widget_area(){
 
 	$idg_wp_widgets_areas['areas'][ $idg_wp_widgets_area_id ]['section_title'] = $_POST['section_area_title'];
 	$idg_wp_widgets_areas['areas'][ $idg_wp_widgets_area_id ]['section_class'] = $_POST['section_area_classes'];
+	$idg_wp_widgets_areas['areas'][ $idg_wp_widgets_area_id ]['section_color'] = $_POST['section_area_color'];
 	$idg_wp_widgets_areas['areas'][ $idg_wp_widgets_area_id ]['section_before_widget_class'] = $_POST['section_before_widget_class'];
 
 	set_theme_mod( 'idg_wp_widgets_areas', $idg_wp_widgets_areas );

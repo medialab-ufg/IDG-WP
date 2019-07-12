@@ -151,7 +151,10 @@ get_header();
 			$sections = explode( ',', $sections );
 			
 			foreach ($sections as $section) : ?>
-			<section id="<?php echo $section; ?>" class="<?php echo empty( $idg_wp_widgets_areas['areas'][$section]['section_class'] ) ? 'mt-5 mb-5 pt-4' : $idg_wp_widgets_areas['areas'][$section]['section_class']; ?>">
+			<?php 
+			$section_color_class = isset( $idg_wp_widgets_areas['areas'][$section]['section_color'] ) ? $idg_wp_widgets_areas['areas'][$section]['section_color'] : '';
+			?>
+			<section id="<?php echo $section; ?>" class="<?php echo empty( $idg_wp_widgets_areas['areas'][$section]['section_class'] ) ? 'mt-5 mb-5 pt-4' : $idg_wp_widgets_areas['areas'][$section]['section_class']; ?> <?php echo $section_color_class; ?>">
 				<div class="container">
 					<div class="row">
 						
