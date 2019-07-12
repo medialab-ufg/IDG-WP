@@ -8494,6 +8494,18 @@ body.page #main-single {
     #accessibility-bar li.vlibras a:before {
       background-position: -268px -223px; }
 
+.section--color-green {
+  background-color: #1FC86A !important; }
+
+.section--color-blue {
+  background-color: #19224D !important; }
+
+.section--color-black {
+  background-color: #222222 !important; }
+
+.section--color-gray {
+  background: #eeeeee !important; }
+
 #agenda {
   transition: all ease-in-out 0.2s;
   background-color: #19224D;
