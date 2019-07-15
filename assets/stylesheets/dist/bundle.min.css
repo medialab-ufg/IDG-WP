@@ -8495,16 +8495,24 @@ body.page #main-single {
       background-position: -268px -223px; }
 
 .section--color-green {
+  color: rgba(255, 255, 255, 0.6) !important;
+  background-image: url(../../img/arrow-pattern.svg) !important;
   background-color: #1FC86A !important; }
 
 .section--color-blue {
+  color: rgba(255, 255, 255, 0.6) !important;
+  background-image: url(../../img/arrow-pattern.svg) !important;
   background-color: #19224D !important; }
 
 .section--color-black {
+  color: rgba(255, 255, 255, 0.6) !important;
+  background-image: url(../../img/arrow-pattern.svg) !important;
   background-color: #222222 !important; }
 
 .section--color-gray {
-  background: #eeeeee !important; }
+  color: rgba(0, 0, 0, 0.6) !important;
+  background-image: url(../../img/arrow-pattern.svg) !important;
+  background-color: #eeeeee !important; }
 
 #agenda {
   transition: all ease-in-out 0.2s;
