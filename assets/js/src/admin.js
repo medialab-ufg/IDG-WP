@@ -164,11 +164,22 @@
 						sectionTitle += '<input class="widefat section-area-title" type="text">';
 						sectionTitle += '</p>';
 
+					var sectionColor  = '<p>';
+						sectionColor += '<label>Section color</label>';
+						sectionColor += '<select class="widefat section-area-color">';
+						sectionColor += '<option value="">White</option>';
+						sectionColor += '<option value="section--color-green">Green</option>';
+						sectionColor += '<option value="section--color-blue">Blue</option>';
+						sectionColor += '<option value="section--color-black">Black</option>';
+						sectionColor += '<option value="section--color-gray">Gray</option>';
+						sectionColor += '</select>';
+						sectionColor += '</p>';
+
 					var sectionClasses  = '<p>';
 						sectionClasses += '<label>Section custom class</label>';
 						sectionClasses += '<input class="widefat section-area-classes" type="text">';
 						sectionClasses += '</p>';
-
+					
 					var beforeWidgetClasses  = '<p>';
 						beforeWidgetClasses += '<label>Before each widget class</label>';
 						beforeWidgetClasses += '<input class="widefat section-area-before-widget-classes" type="text">';
@@ -178,7 +189,7 @@
 						sectionUpdateButton += '<a href="#" class="section-area-custom-data-update button button-primary right">Update section</a>';
 						sectionUpdateButton += '</div></div>';
 
-					$(this).closest('.widgets-holder-wrap').find('.description').last().append(sectionTitle + sectionClasses + beforeWidgetClasses + sectionUpdateButton);
+					$(this).closest('.widgets-holder-wrap').find('.description').last().append(sectionTitle + sectionColor + sectionClasses + beforeWidgetClasses + sectionUpdateButton);
 
 					var idg_wp_widgets_area_id = $(this).closest( '.widgets-holder-wrap' ).find( 'div[id^=idg_wp_widget_area_]' ).attr( 'id' );
 
@@ -194,6 +205,7 @@
 							if( res.success ){
 								$('#' + idg_wp_widgets_area_id).find('.section-area-title').val(res.data.section_title);
 								$('#' + idg_wp_widgets_area_id).find('.section-area-classes').val(res.data.section_class);
+								$('#' + idg_wp_widgets_area_id).find('.section-area-color').val(res.data.section_color);
 								$('#' + idg_wp_widgets_area_id).find('.section-area-before-widget-classes').val(res.data.section_before_widget_class);
 							}
 						}
@@ -226,6 +238,7 @@
 						var idg_wp_widgets_area_id = $(this).closest( '.widgets-holder-wrap' ).find( 'div[id^=idg_wp_widget_area_]' ).attr( 'id' ),
 							section_area_title = $('#' + idg_wp_widgets_area_id).find( '.section-area-title' ).val(),
 							section_area_classes = $('#' + idg_wp_widgets_area_id).find( '.section-area-classes' ).val(),
+							section_area_color = $('#' + idg_wp_widgets_area_id).find( '.section-area-color' ).val(),
 							section_before_widget_class = $('#' + idg_wp_widgets_area_id).find( '.section-area-before-widget-classes' ).val();
 
 						$.ajax( {
@@ -237,6 +250,7 @@
 									idg_wp_widgets_area_id : idg_wp_widgets_area_id,
 									section_area_title : section_area_title,
 									section_area_classes : section_area_classes,
+									section_area_color : section_area_color,
 									section_before_widget_class : section_before_widget_class,
 								},
 							success: function( data ){
