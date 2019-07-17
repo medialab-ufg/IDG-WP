@@ -18,3 +18,12 @@
     background-image: url(../../img/arrow-pattern.svg) !important;
     background-color: #eeeeee !important;
 }
+
+body main .theme-items-list .tainacan-records-container .tainacan-record {
+    background-color: #eee !important;
+
+    &:hover {
+        .metadata-title { background-color: #ccc !important; }
+        .media { background-color: #ddd !important; }
+    }
+}
