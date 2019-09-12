@@ -18,7 +18,7 @@ $current_taxonomy = get_taxonomy( $current_term->taxonomy );
 		</div>
 
 		<div class="pt-4 pb-4">
-			<p>
+			<p class="pl-4 pr-4">
 				<?php tainacan_the_term_description(); ?>
 			</p>
 
