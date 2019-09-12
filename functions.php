@@ -83,6 +83,7 @@ if ( ! function_exists( 'idg_wp_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );*/
+
 	}
 endif;
 add_action( 'after_setup_theme', 'idg_wp_setup' );
@@ -258,7 +259,7 @@ function bootstrap_comment( $comment, $args, $depth ) {
  * @return array
  */
 function multisite_body_classes($classes) {
-	$high_contrast_cookie = $_COOKIE['high-contrast'] === 'on' ? 'high-contrast' : '';
+	$high_contrast_cookie = isset($_COOKIE['high-contrast'] ) && $_COOKIE['high-contrast'] === 'on' ? 'high-contrast' : '';
 	$classes[] = $high_contrast_cookie;
 
 	return $classes;
