@@ -84,6 +84,11 @@ if ( ! function_exists( 'idg_wp_setup' ) ) :
 			'flex-height' => true,
 		) );*/
 
+		/**
+		 * Display in gutenberg plugin the full width for blocks
+		 */
+		add_theme_support( 'align-wide' );
+
 	}
 endif;
 add_action( 'after_setup_theme', 'idg_wp_setup' );

@@ -7642,7 +7642,8 @@ figure.wp-caption {
         white-space: normal; } }
 
 body.page #main-single {
-  background: #FFFFFF; }
+  background: #FFFFFF;
+  overflow-x: hidden; }
 
 body.high-contrast #main-single {
   background: #000000 !important; }
@@ -7923,6 +7924,57 @@ body.high-contrast #main-single {
 
 .align-center {
   align-items: center; }
+
+@media (min-width: 576px) {
+  .alignwide {
+    margin-left: -16px !important;
+    margin-right: -16px !important;
+    max-width: 540px  !important;
+    width: 540px; } }
+
+@media (min-width: 768px) {
+  .alignwide {
+    margin-left: -16px !important;
+    margin-right: -16px !important;
+    max-width: 740px !important;
+    width: 740px; } }
+
+@media (min-width: 992px) {
+  .alignwide {
+    margin-left: -30px !important;
+    margin-right: -30px !important;
+    max-width: 990px !important;
+    width: 990px; } }
+
+@media (min-width: 1200px) {
+  .alignwide {
+    margin-left: -80px !important;
+    margin-left: -80px !important;
+    max-width: 1120px !important;
+    width: 1120px; } }
+
+.wp-block-image.alignwide > img {
+  max-width: 100% !important;
+  width: 100% !important; }
+
+.alignfull {
+  margin-left: calc( -100vw / 2 + 100% / 2) !important;
+  margin-right: calc( -100vw / 2 + 100% / 2) !important;
+  max-width: 100%;
+  max-width: 100vw;
+  width: 100%;
+  width: 100vw; }
+
+.wp-block-image.alignfull > img {
+  max-width: 100% !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  width: 100vw !important;
+  padding: 0 !important; }
+
+.wp-block-tainacan-carousel-items-list.alignfull .tainacan-carousel {
+  width: calc(100% + 30px);
+  left: -15px; }
 
 .btn,
 .wpcf7-submit {
