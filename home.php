@@ -175,6 +175,20 @@ get_header();
 		
 	<?php endif; ?>
 
+		<?php if(idg_wp_get_option('home_show_agenda')): ?>
+
+			<section class="pt-5 pb-5 mb-5" id="agenda">
+				<div class="container">
+					<div class="row justify-content-md-center">
+						<div class="col-lg-12">
+							<?php echo do_shortcode( '[gs-agenda event-cats="agenda-cultural, agenda-do-ministro, agenda-de-cursos"]' );?>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<?php endif; ?>
+
 	</main>
 
 <?php

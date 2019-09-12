@@ -7644,7 +7644,9 @@ figure.wp-caption {
 body.page #main-single {
   background: #FFFFFF; }
 
-<<<<<<< HEAD
+body.high-contrast #main-single {
+  background: #000000 !important; }
+
 @media (min-width: 320px) and (max-width: 1150px) {
   #main-single {
     overflow: hidden; } }
@@ -9655,10 +9657,11 @@ body.high-contrast .subpages-menu .menu-content button {
   border-bottom: 1px solid #f1f1f1;
   padding: 45px 0;
   top: 100%;
-  height: max-content;
   z-index: 100;
   visibility: hidden;
-  opacity: 0; }
+  opacity: 0;
+  height: 0;
+  overflow: hidden; }
   @media (min-width: 1150px) {
     #menu-wrapper {
       transition: visibility 0s linear 0.25s, opacity 0.25s;
@@ -10075,7 +10078,10 @@ body.high-contrast .subpages-menu .menu-content button {
         top: 50%;
         font-family: 'icomoon'; }
 
-<<<<<<< HEAD
+body.high-contrast .texto-copyright .voltar-topo a:after {
+  background: #FFFFFF !important;
+  color: #000000 !important; }
+
 @media (min-width: 320px) and (max-width: 1150px) {
   #main-single > .container > .row {
     overflow: hidden; } }
@@ -11522,6 +11528,9 @@ p img.alignright, p img.alignleft {
         .wp-block-gutenberg-boilerplate-es5-idgwp-gutenberg-block-card a:hover .btn {
           border-color: #06ACFF;
           color: #06ACFF; } }
+
+.wp-block-quote {
+  margin: 20px 0; }
 
 #com-via-whatsapp-form {
   border-radius: 0.25rem;

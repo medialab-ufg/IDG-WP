@@ -52,7 +52,7 @@
 				//
 				// } else {
 				// 	bodyScrollLock.clearAllBodyScrollLocks();
-				// } 
+				// }
 			})
 
 			$('#menu-wrapper, #menu-toggle').click(function(event){
