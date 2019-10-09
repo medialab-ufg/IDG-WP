@@ -100,6 +100,9 @@
 											tainacan_the_metadata( $args );
 										?>
 									</ul>
+									
+									<?php do_action( 'tainacan-interface-single-item-after-metadata' ); ?>
+									
 								</article>
 							</div>
 
