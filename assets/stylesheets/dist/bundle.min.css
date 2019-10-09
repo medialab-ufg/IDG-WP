@@ -9576,7 +9576,7 @@ body.high-contrast .subpages-menu .menu-content button {
 @media (min-width: 320px) and (max-width: 1150px) {
   #main-header .site-title a {
     text-decoration: none; } }
-  .home #main-header {
+  .blog #main-header {
     position: absolute;
     left: 0;
     top: 0;
