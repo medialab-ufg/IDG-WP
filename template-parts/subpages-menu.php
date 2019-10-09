@@ -2,7 +2,7 @@
 global $post;
 $children = get_pages( array( 'child_of' => $post->ID ) );?>
 
-<?php if ( is_page() && count( $children ) > 0 ) : ?>
+<?php if ( (is_page() && count( $children ) > 0) || $post->post_parent==0 ) : ?>
   <?php $pageId = $post->ID; ?>
 <?php else : ?>
   <?php $pageId = $post->post_parent; ?>
