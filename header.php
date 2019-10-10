@@ -69,7 +69,7 @@
 						'menu'              => 'featured-links',
 						'theme_location'    => 'featured-links',
 						'depth'             => 1,
-						'container'         => '',
+						'container'         => 'ul',
 						'menu_class'   => 'nav d-none d-md-flex',
 					);
 					wp_nav_menu($menu_args); ?>
