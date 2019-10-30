@@ -15,6 +15,9 @@
   &.has-2-columns {
     grid-template-columns: repeat(2, 1fr);
   }
+  &.has-3-columns {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   .wp-block-column {
     margin: 0;

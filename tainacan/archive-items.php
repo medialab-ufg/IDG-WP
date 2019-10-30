@@ -8,16 +8,15 @@
 			<div class="row" id="content">
 				<div class="col-12 pt-4 pb-4">
 					<h1 class="page-title text-center"><?php echo tainacan_get_the_collection_name(); ?></h1>
+					<p class="pl-4 pr-4">
+						<?php tainacan_the_collection_description(); ?>
+					</p>
 					<?php echo share_box('',true); ?>
 				</div>
 			</div>
 		</div>
 
 		<div class="pt-4 pb-4">
-			<p class="pl-4 pr-4">
-				<?php tainacan_the_collection_description(); ?>
-			</p>
-
 			<?php tainacan_the_faceted_search(); ?>
 		</div>
 	</main>

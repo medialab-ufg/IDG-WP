@@ -175,7 +175,7 @@ $preto: #000;
 	column-gap: 60px;
 
 	li {
-		margin-bottom: 34px;
+		margin-bottom: 32px;
 		-webkit-column-break-inside: avoid;
 		page-break-inside: avoid;
 		break-inside: avoid;
@@ -192,7 +192,13 @@ $preto: #000;
 		font-weight: 400;
 		font-size: .9rem;
 		color: $cinza-6;
-		line-height: 1rem;
+		line-height: 1.4rem;
+	}
+
+	@media screen and (max-width: 1199px){
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
 	}
 }
 .box-acervo__header {
@@ -438,3 +444,17 @@ $preto: #000;
 #breadcrumb-wrapper .breadcrumb a { padding: 0; }
 
 .theme-items-list.repository-level-page.is-fullscreen { position: fixed; }
+
+/* Gutenberg Blocks specifics */
+.wp-block-tainacan-collections-list ul.collections-list.collections-layout-grid li.collection-list-item a,
+.wp-block-tainacan-collections-list ul.collections-list-edit.collections-layout-grid li.collection-list-item a,
+.wp-block-tainacan-dynamic-items-list ul.items-list.items-layout-grid li.item-list-item a,
+.wp-block-tainacan-dynamic-items-list ul.items-list-edit.items-layout-grid li.item-list-item a,
+.wp-block-tainacan-items-list ul.items-list.items-layout-grid li.item-list-item a,
+.wp-block-tainacan-items-list ul.items-list-edit.items-layout-grid li.item-list-item a,
+.wp-block-tainacan-terms-list ul.terms-list.terms-layout-grid li.term-list-item a,
+.wp-block-tainacan-terms-list ul.terms-list-edit.terms-layout-grid li.term-list-item a,
+.wp-block-tainacan-facets-list ul.facets-list.facets-layout-grid li.facet-list-item a, 
+.wp-block-tainacan-facets-list ul.facets-list-edit.facets-layout-grid li.facet-list-item a {
+	text-decoration: none;
+}

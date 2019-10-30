@@ -723,3 +723,19 @@ body.high-contrast #main-single { background: color(black) !important; }
 	width: calc(100% + 30px);
     left: -15px;
 }
+
+.wp-block-media-text {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+
+	.wp-block-media-text__content {
+		padding: 1.75rem 8%;	
+	}
+}
+.wp-block-table {
+	margin-top: 1rem;
+	margin-bottom: 1.5rem;
+}
+ul {
+	padding-left: 2rem;
+}

@@ -7976,6 +7976,19 @@ body.high-contrast #main-single {
   width: calc(100% + 30px);
   left: -15px; }
 
+.wp-block-media-text {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+  .wp-block-media-text .wp-block-media-text__content {
+    padding: 1.75rem 8%; }
+
+.wp-block-table {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem; }
+
+ul {
+  padding-left: 2rem; }
+
 .btn,
 .wpcf7-submit {
   transition: all ease 0.2s;
@@ -10702,9 +10715,12 @@ body.high-contrast #posts-list li {
     #share-box a.g-plus:hover {
       background: #db4437; }
     #share-box a.linkedin:before {
-      background-position: -242px -59px; }
+      background-position: -242px -59px;
+      filter: brightness(0); }
     #share-box a.linkedin:hover {
       background: #0073b1; }
+    #share-box a.linkedin:hover::before {
+      filter: grayscale(1) brightness(5); }
 
 body.high-contrast #share-box a {
   border-color: #000000; }
@@ -11531,6 +11547,8 @@ p img.alignright, p img.alignleft {
     grid-template-columns: repeat(2, 1fr); } }
   .wp-block-columns.has-2-columns {
     grid-template-columns: repeat(2, 1fr); }
+  .wp-block-columns.has-3-columns {
+    grid-template-columns: repeat(3, 1fr); }
   .wp-block-columns .wp-block-column {
     margin: 0; }
 
@@ -11873,7 +11891,7 @@ p img.alignright, p img.alignleft {
   column-count: 3;
   column-gap: 60px; }
   .box-acervo__metadata li {
-    margin-bottom: 34px;
+    margin-bottom: 32px;
     -webkit-column-break-inside: avoid;
     page-break-inside: avoid;
     break-inside: avoid;
@@ -11886,7 +11904,12 @@ p img.alignright, p img.alignleft {
     font-weight: 400;
     font-size: .9rem;
     color: #515151;
-    line-height: 1rem; }
+    line-height: 1.4rem; }
+  @media screen and (max-width: 1199px) {
+    .box-acervo__metadata {
+      -moz-column-count: 2;
+      -webkit-column-count: 2;
+      column-count: 2; } }
 
 .box-acervo__header {
   width: 100%;
@@ -12097,3 +12120,16 @@ p img.alignright, p img.alignleft {
 
 .theme-items-list.repository-level-page.is-fullscreen {
   position: fixed; }
+
+/* Gutenberg Blocks specifics */
+.wp-block-tainacan-collections-list ul.collections-list.collections-layout-grid li.collection-list-item a,
+.wp-block-tainacan-collections-list ul.collections-list-edit.collections-layout-grid li.collection-list-item a,
+.wp-block-tainacan-dynamic-items-list ul.items-list.items-layout-grid li.item-list-item a,
+.wp-block-tainacan-dynamic-items-list ul.items-list-edit.items-layout-grid li.item-list-item a,
+.wp-block-tainacan-items-list ul.items-list.items-layout-grid li.item-list-item a,
+.wp-block-tainacan-items-list ul.items-list-edit.items-layout-grid li.item-list-item a,
+.wp-block-tainacan-terms-list ul.terms-list.terms-layout-grid li.term-list-item a,
+.wp-block-tainacan-terms-list ul.terms-list-edit.terms-layout-grid li.term-list-item a,
+.wp-block-tainacan-facets-list ul.facets-list.facets-layout-grid li.facet-list-item a,
+.wp-block-tainacan-facets-list ul.facets-list-edit.facets-layout-grid li.facet-list-item a {
+  text-decoration: none; }

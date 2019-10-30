@@ -70,9 +70,13 @@
 		&.linkedin {
 			&:before {
 				background-position: -242px -59px;
+				filter: brightness(0);
 			}
 			&:hover {
 				background: #0073b1;
+			}
+			&:hover::before {
+				filter: grayscale(1) brightness(5);
 			}
 		}
 	}

@@ -31,20 +31,25 @@
 							<?php endif; ?>
 
 							<?php
-								$attachment = array_values(
-									get_children(
-										array(
-											'post_parent' => $post->ID,
-											'post_type' => 'attachment',
-											'post_mime_type' => 'image',
-											'order' => 'ASC',
-											'numberposts'  => -1,
+								if (function_exists('tainacan_get_the_attachments')) {
+									$attachments = tainacan_get_the_attachments();
+								} else {
+									// compatibility with pre 0.11 tainacan plugin
+									$attachments = array_values(
+										get_children(
+											array(
+												'post_parent' => $post->ID,
+												'post_type' => 'attachment',
+												'post_mime_type' => 'image',
+												'order' => 'ASC',
+												'numberposts'  => -1,
+											)
 										)
-									)
-								);
+									);
+								}
 							?>
 
-							<?php if ( ! empty( $attachment ) ) : ?>
+							<?php if ( ! empty( $attachments ) ) : ?>
 
 								<section class="box-carousel-attachments">
 									<h3 class="box-carousel-attachments__title"><?php _e( 'Attachments', 'tainacan-interface' ); ?></h3>
@@ -56,7 +61,7 @@
 										</div>
 
 										<ul class="carousel-attachments">
-											<?php foreach ( $attachment as $attachment ) { ?>
+											<?php foreach ( $attachments as $attachment ) { ?>
 												<li>
 													<a href="<?php echo $attachment->guid; ?>" target="_BLANK" style="background-image: url(<?php echo wp_get_attachment_image_url( $attachment->ID, 'tainacan-interface-item-attachments' ); ?>);"></a>
 												</li>
