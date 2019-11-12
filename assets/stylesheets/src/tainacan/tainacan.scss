@@ -195,6 +195,26 @@ $preto: #000;
 		line-height: 1.4rem;
 	}
 
+	// Metadata type textarea has different separator
+	.multivalue-separator {
+		color: #cbcbcb;
+		margin: 0 8px;    
+	}
+	.hierarchy-separator {
+		color: #cbcbcb;  
+	}
+	.metadata-type-textarea {
+		.multivalue-separator {
+			display: block;
+			max-height: 1px;
+			width: 35px;
+			background: #cbcbcb;
+			content: none;
+			color: transparent;
+			margin: 0.875rem auto;
+		}
+	}
+
 	@media screen and (max-width: 1199px){
 		-moz-column-count: 2;
 		-webkit-column-count: 2;
