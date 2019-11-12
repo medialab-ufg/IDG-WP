@@ -11905,6 +11905,19 @@ p img.alignright, p img.alignleft {
     font-size: .9rem;
     color: #515151;
     line-height: 1.4rem; }
+  .box-acervo__metadata .multivalue-separator {
+    color: #cbcbcb;
+    margin: 0 8px; }
+  .box-acervo__metadata .hierarchy-separator {
+    color: #cbcbcb; }
+  .box-acervo__metadata .metadata-type-textarea .multivalue-separator {
+    display: block;
+    max-height: 1px;
+    width: 35px;
+    background: #cbcbcb;
+    content: none;
+    color: transparent;
+    margin: 0.875rem auto; }
   @media screen and (max-width: 1199px) {
     .box-acervo__metadata {
       -moz-column-count: 2;
