@@ -52,7 +52,7 @@
 							<?php if ( ! empty( $attachments ) ) : ?>
 
 								<section class="box-carousel-attachments">
-									<h3 class="box-carousel-attachments__title"><?php _e( 'Attachments', 'tainacan-interface' ); ?></h3>
+									<h3 class="box-carousel-attachments__title"> Anexos </h3>
 
 									<div class="box-carousel-attachments__wrapper">
 										<div class="box-carousel__control">
@@ -89,7 +89,7 @@
 									<ul class="box-acervo__metadata">
 										<li>
 											<div class="box-acervo__header">
-												<h4 class="box-acervo__metadata-title"><?php _e( 'Thumbnail', 'tainacan-interface' ); ?></h4>
+												<h4 class="box-acervo__metadata-title"> Miniatura </h4>
 												<img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'tainacan-medium-full' ) ?>">
 											</div>
 										</li>
@@ -114,7 +114,7 @@
 
 						<?php endwhile; ?>
 					<?php else : ?>
-						<?php _e( 'Nothing found', 'tainacan-interface' ); ?>
+						Nenhum item
 					<?php endif; ?>
 				</div>
 			</div>
